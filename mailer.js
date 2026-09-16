@@ -11,6 +11,10 @@ const CONFIG = {
   excelFile: 'HR_Email_Automation.xlsx', // Your specified Excel file
   progressFile: 'progress.json',
   resumePath: path.join(__dirname, 'Twaran_Gupta_Backend_Software_Engineer.pdf'), // Your specified PDF
+  // Test mode: run with `TEST_MODE=true node mailer.js` to send ONE email to
+  // testEmail and exit, without reading the list or touching progress.json.
+  testMode: process.env.TEST_MODE === 'true',
+  testEmail: 'twarangupta01@gmail.com',
 };
 
 // Subject lines are rotated per contact so a few hundred identical subjects
@@ -128,6 +132,26 @@ function buildHtmlBody(hrName) {
   `;
 }
 
+async function sendTestEmail() {
+  const hrName = 'Hiring Team';
+  const mailOptions = {
+    from: `"Twaran Gupta" <${process.env.GMAIL_USER}>`,
+    replyTo: 'twarangupta01@gmail.com',
+    to: CONFIG.testEmail,
+    subject: `[TEST] ${SUBJECTS[0]}`,
+    text: buildTextBody(hrName),
+    html: buildHtmlBody(hrName),
+    attachments: [
+      {
+        filename: 'Twaran_Gupta_Backend_Software_Engineer.pdf',
+        path: CONFIG.resumePath,
+      },
+    ],
+  };
+  await transporter.sendMail(mailOptions);
+  console.log(`Test email sent to ${CONFIG.testEmail}. Check how it renders, then run without TEST_MODE to send real batches.`);
+}
+
 async function runMailer() {
   // Read the Excel file
   const workbook = xlsx.readFile(CONFIG.excelFile);
@@ -204,4 +228,8 @@ async function runMailer() {
   console.log(`Batch complete. Progress updated to index ${lastIndex + batch.length}.`);
 }
 
-runMailer().catch(console.error);
+if (CONFIG.testMode) {
+  sendTestEmail().catch(console.error);
+} else {
+  runMailer().catch(console.error);
+}

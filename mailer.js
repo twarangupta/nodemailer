@@ -6,7 +6,7 @@ const path = require('path');
 
 // Configuration
 const CONFIG = {
-  batchSize: 50,
+  batchSize: 100,
   delayMs: 45000, // 45 seconds between each email
   excelFile: 'HR_Email_Automation.xlsx', // Your specified Excel file
   progressFile: 'progress.json',

@@ -75,59 +75,32 @@ Twaran Gupta
 linkedin.com/in/twarangupta | github.com/twarangupta | twarangupta.com`;
 }
 
-// HTML version.
+// HTML version. Plain formatting, tech stack bolded.
 function buildHtmlBody(hrName) {
   return `
-  <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f4f6f9; padding: 30px 10px; width: 100%;">
-    <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 30px; border-radius: 8px; border: 1px solid #e1e4e8; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+  <div>
+    <p>Hi ${hrName},</p>
 
-      <!-- Header Section -->
-      <div style="border-bottom: 2px solid #007bff; padding-bottom: 15px; margin-bottom: 20px;">
-        <h1 style="margin: 0; font-size: 24px; color: #1a1a1a;">Twaran Gupta</h1>
-        <p style="margin: 5px 0 0 0; font-size: 16px; color: #007bff; font-weight: 600;">Software Engineer | Backend &amp; Full-Stack</p>
-      </div>
+    <p>I am a Software Engineer who cut production API response times by 60% (about 500ms to 200ms) at ZS Associates, and I am now exploring new backend and full-stack roles.</p>
 
-      <!-- Main Content -->
-      <p style="color: #444444; font-size: 15px; line-height: 1.6; margin-top: 0;">Hi ${hrName},</p>
+    <p>At ZS Associates I built and shipped backend services for Pfizer and Merck: multi-tenant REST APIs secured with JWT and role-based access, plus an async re-architecture with Redis caching that drove the number above. Alongside my enterprise work, I designed and shipped SinkedIn, a live full-stack platform, end to end.</p>
 
-      <p style="color: #444444; font-size: 15px; line-height: 1.6;">
-        I am a Software Engineer who <strong>cut production API response times by 60%</strong> (about 500ms to 200ms) at ZS Associates, and I am now exploring new backend and full-stack roles.
-      </p>
+    <p>I am available to start immediately, and open to remote roles or on-site in Pune, Bangalore, Hyderabad, or Delhi NCR.</p>
 
-      <p style="color: #444444; font-size: 15px; line-height: 1.6;">
-        At ZS Associates I built and shipped backend services for Pfizer and Merck: multi-tenant REST APIs secured with JWT and role-based access, plus an async re-architecture with Redis caching that drove the number above. Alongside my enterprise work, I designed and shipped SinkedIn, a live full-stack platform, end to end.
-      </p>
+    <p>
+      Core Tech Stack<br>
+      Backend: <strong>Node.js, Express.js, PostgreSQL, Redis, REST APIs</strong><br>
+      Frontend: <strong>React.js, Next.js</strong><br>
+      Cloud &amp; Tools: <strong>AWS, Docker, Git, CI/CD</strong>
+    </p>
 
-      <p style="color: #444444; font-size: 15px; line-height: 1.6;">
-        I am available to <strong>start immediately</strong>, and open to remote roles or on-site in Pune, Bangalore, Hyderabad, or Delhi NCR.
-      </p>
+    <p>Even a quick note on whether your team is hiring backend or full-stack engineers would help. My resume is attached for your review.</p>
 
-      <!-- Tech Stack (softened: neutral block, no marketing accent) -->
-      <div style="background-color: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; margin: 25px 0; border-radius: 6px;">
-        <h3 style="margin: 0 0 10px 0; color: #1a1a1a; font-size: 16px;">Core Tech Stack</h3>
-        <p style="margin: 5px 0; font-size: 14px; color: #444444;">Backend: <strong>Node.js, Express.js, PostgreSQL, Redis, REST APIs</strong></p>
-        <p style="margin: 5px 0; font-size: 14px; color: #444444;">Frontend: <strong>React.js, Next.js</strong></p>
-        <p style="margin: 5px 0 0 0; font-size: 14px; color: #444444;">Cloud &amp; Tools: <strong>AWS, Docker, Git, CI/CD</strong></p>
-      </div>
-
-      <p style="color: #444444; font-size: 15px; line-height: 1.6;">
-        Even a quick note on whether your team is hiring backend or full-stack engineers would help. My resume is attached for your review.
-      </p>
-
-      <!-- Footer with Buttons -->
-      <div style="margin-top: 35px; padding-top: 20px; border-top: 1px solid #e1e4e8;">
-        <p style="margin: 0; color: #1a1a1a; font-weight: bold; font-size: 15px;">Twaran Gupta</p>
-        <p style="margin: 5px 0 15px 0; color: #666666; font-size: 14px;">+91 9718117060</p>
-
-        <!-- Social Buttons -->
-        <div>
-          <a href="https://www.linkedin.com/in/twarangupta" style="display: inline-block; padding: 10px 16px; background-color: #0072b1; color: #ffffff; text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: bold; margin-right: 8px;">LinkedIn</a>
-          <a href="https://github.com/twarangupta" style="display: inline-block; padding: 10px 16px; background-color: #24292e; color: #ffffff; text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: bold; margin-right: 8px;">GitHub</a>
-          <a href="https://twarangupta.com" style="display: inline-block; padding: 10px 16px; background-color: #17a2b8; color: #ffffff; text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: bold;">Portfolio</a>
-        </div>
-      </div>
-
-    </div>
+    <p>
+      Twaran Gupta<br>
+      +91 9718117060<br>
+      <a href="https://www.linkedin.com/in/twarangupta">LinkedIn</a> | <a href="https://github.com/twarangupta">GitHub</a> | <a href="https://twarangupta.com">Portfolio</a>
+    </p>
   </div>
   `;
 }

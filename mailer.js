@@ -153,8 +153,7 @@ async function runMailer() {
 
     // Data mapping from your cleaned columns
     const firstName = contact['First Name'] ? String(contact['First Name']).trim() : '';
-    const lastName = contact['Last Name'] ? String(contact['Last Name']).trim() : '';
-    let hrName = `${firstName} ${lastName}`.trim();
+    let hrName = firstName;
     if (!hrName) hrName = 'Hiring Team';
 
     const hrEmail = contact['Email'];
